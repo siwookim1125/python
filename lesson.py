@@ -115,3 +115,5 @@ s = np.random.normal(0, 1, 1000)
 import matplotlib.pyplot as plt
 plt.hist(s)
 plt.show()
+
+print('test')
