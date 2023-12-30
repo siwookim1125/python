@@ -111,9 +111,8 @@ import numpy as np # numpy 패키지 로드하여 np로 사용
 # 정규분포
 
 s = np.random.normal(0, 1, 1000)
-
+print(s)
 import matplotlib.pyplot as plt
 plt.hist(s)
 plt.show()
 
-print('test')
