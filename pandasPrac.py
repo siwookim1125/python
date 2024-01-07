@@ -59,4 +59,14 @@ data1 = sc.loc[:,["작업기록ID","문화재명","작업시작일자"]]
 #n중으로 조건이 걸릴경우, 필터링한 데이터를 임시저장 후 다시 필터.
 temp1 = data1["작업시작일자"] >= 20211000
 temp2 = data1["작업시작일자"] < 20211100
-print(data1[temp1 & temp2])
+outdata = temp1  & temp2
+print(data1[outdata])
+
+writer = pd.ExcelWriter("/", engine='openpyxl')
+# SAVE_DIR: excel 파일을 저장하고자 하는 경로
+
+# dfresult: 저장하고자 하는 데이터
+outdata.to_excel(writer, sheet_name='s1')
+outdata.to_excel(writer, sheet_name='s2')
+
+writer.save()
