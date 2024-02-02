@@ -28,10 +28,10 @@ import matplotlib.font_manager as fm
 f = [f.name for f in fm.fontManager.ttflist]
 print(f)
 
-df = pd.DataFrame(date, index=['8월', '9월', '10월', '11월'], columns=['yax'])
+df = pd.DataFrame(date, index=['8', '9', '10', '11'], columns=['yax'])
 
 plot = df.plot.pie(y='yax', figsize=(5, 5), autopct='%1.1f%%')
-plt.title('2021, 월별 작업 비율')
+plt.title('2021')
 # Monthly Working Ratio
 plt.ylabel('')
 plt.rcParams['font.family'] ='Century Gothic'
