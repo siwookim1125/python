@@ -58,3 +58,4 @@ from functools import reduce
 #k = list(filter(lambda x: x % 4 != 2,  range(10)))
 #print (k)
 
+
