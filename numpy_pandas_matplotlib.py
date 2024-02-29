@@ -46,10 +46,5 @@ test result --> accuracy of the model
 x, y = zip(['a',1],['b',2],['c',3])
 print (x) #tuple
 print (y) #tuple
-# --------------------------------------------------------------- Data Splitting using df
 
-values2 = [['abcdefg',1],
-           ['dsadosa',1],
-           ['dskaldj',0],
-           ['hghfhgf',1]
-           ]
+
