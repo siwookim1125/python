@@ -29,4 +29,18 @@ df = pd.read_csv("https://raw.githubusercontent.com/Datamanim/datarepo/main/yout
 
 
 #각 요일별 인기 영상들의 categoryId는 각각 몇개 씩인지 하나의 데이터 프레임으로 표현하라
+# https://teddylee777.github.io/pandas/pandas-groupby/  #groupby내용 정리
+df['요일'] = pd.to_datetime(df['trending_date2'])
+# print(df['요일'])
+g = df.groupby([df['요일'].dt.day_name(),'categoryId'],as_index=False).size()
+print(g)
 
+result= g.pivot(index='categoryId',columns='요일')
+print(result)
+
+
+# target2= df.loc[df.view_count!=0]
+# t = target2.copy()
+# t['ratio'] = (target2['comment_count']/target2['view_count']).dropna()
+# result = t.sort_values(by='ratio', ascending=False).iloc[0]
+# print(result)

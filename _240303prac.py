@@ -51,7 +51,7 @@ result = df[["channelTitle","trending_date2"]]
 final = result.drop_duplicates().channelTitle.value_counts()
 print(final.head(1)) # ??? 내가해냄 어케했지?????????
 
-#9
+#9 20회(20일)이상 인기동영상 리스트에 포함된 동영상의 숫자는?
 channel = df['channelTitle'].value_counts().reset_index()
 print (channel[channel['count'] > 20]) # 아 이건안되네
 
