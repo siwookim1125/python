@@ -57,3 +57,4 @@ result2 = result.sort_values(by='ct', ascending=False)
 result_filtered1 = result1[result1["ct"] > '2021-10-03 03:00:00'].drop_duplicates('channelname')
 result_filtered2 = result2[result2["ct"] < '2021-11-01 15:00:00'].drop_duplicates('channelname')
 result_final = []
+#.
